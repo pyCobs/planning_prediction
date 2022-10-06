@@ -1,5 +1,5 @@
 import pandas as pd
-from KNN import
+from algo_ml import KNN
 #Import des données (Dataframe)
 data = pd.read_csv("Data/Source/T0_VGR.csv", sep=";")
 
@@ -19,7 +19,8 @@ predict = "Cat_T0 VGR"
     
 # K-nearest neighbors
 # ATTENTION : KNN prend des données labelisées, pas de données continues
-#KNN(data, predict)
+KNN.KNN(data, predict)
+#KNN.opti_KNN(data, predict, 2, 20)
 
 # Support Vector Machine
 # ATTENTION : SVM prédit des valeurs entières, pas de données continues
@@ -37,5 +38,5 @@ predict = "Cat_T0 VGR"
 
 # Decision tree
 # ATTENTION : toutes les données doivent être numériques
-decision_Tree(data, predict)
+#decision_Tree(data, predict)
 #opti_decision_Tree(data, predict)
